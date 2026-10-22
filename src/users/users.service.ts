@@ -5,6 +5,7 @@ import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UsersService {
+  // TODO(BE-030): Decouple direct Prisma access into UsersRepository and expand unit test coverage (#227)
   constructor(
     private readonly prisma: PrismaService,
     private readonly eventsService: EventsService,
